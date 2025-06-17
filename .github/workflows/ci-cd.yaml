@@ -24,3 +24,14 @@ jobs:
         run: |
           echo "cool" > sum-file.txt
           cat sum-file.txt
+  run-bash-script:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the code
+      uses: actions/checkout@v4
+
+    - name: Make the main.sh executable
+      run: chmod +x main.sh
+
+    - name: Run the main.sh with the secret
+      run: ./main.sh {{ secrets.SECRET_AGENT }}
