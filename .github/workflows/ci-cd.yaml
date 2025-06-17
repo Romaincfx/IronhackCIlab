@@ -16,11 +16,11 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-    romano:
-      runs-ons: ubuntu-latest
-      steps:
-        - run: echo "Cool!"
-        - name: Better Step
-          run: |
-           echo "cool" > sum-file.txt
-           cat sum-file.txt
+  romano:
+    runs-ons: ubuntu-latest
+    steps:
+      - run: echo "Cool!"
+      - name: Better Step
+        run: |
+          echo "cool" > sum-file.txt
+          cat sum-file.txt
