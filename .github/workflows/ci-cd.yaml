@@ -34,4 +34,4 @@ jobs:
       run: chmod +x main.sh
 
     - name: Run the main.sh with the secret
-      run: ./main.sh {{ secrets.SECRET_AGENT }}
+      run: ./main.sh ${{ secrets.SECRET_AGENT }}
